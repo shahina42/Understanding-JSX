@@ -27,4 +27,22 @@ export default class AppClass extends Component{
   }
 
   // code here
+  render(){
+    let i_data=this.imageData();
+    return(
+      <>
+      <h1>Kalvium Gallary</h1>
+      <div className='body'> 
+        {i_data.map((obj)=>{
+          return(
+            <img src={obj.img} alt="elephant" />
+          )
+        })}
+      </div>
+      </>
+      
+    )
+   
+  }
 }
+
